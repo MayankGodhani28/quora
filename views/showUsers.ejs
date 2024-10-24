@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+        tr,td,th{
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form method="get" action="/users/new">
+            <button>CREATE NEW</button>
+        </form>
+        <br>
+        <br>
+        <tr>
+            <th>id</th>
+            <th>email</th>
+            <th>username</th>
+        </tr>
+            <%for(user of users){%>
+                <tr>
+                    <td><%=user.id%></td>
+                    <td><%=user.email%></td>
+                    <td><%=user.username%></td>
+                    <td>
+                        <form method="get" action="/users/<%=user.id%>/edit">
+                            <button >Edit</button>
+                        </form>
+                        <form method="post" action="/users/<%=user.id%>?_method=delete">
+                            <button >Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <%}%>
+    </table>
+</body>
+</html>

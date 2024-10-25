@@ -1,10 +1,10 @@
-# quora post
-to practice rest full API/ejs.
+# Quora post
 
-# features
--add post
--delete post
--create post
--edit post
+## Overview
+This repository serves as a learning project where I implemented a simple RESTful API that simulates a database using arrays. The project demonstrates the basic principles of CRUD (Create, Read, Update, Delete) operations.
 
-Thank You.
+## Technologies Used
+- Node.js
+- Express.js
+- JavaScript
+- Arrays for data simulation
